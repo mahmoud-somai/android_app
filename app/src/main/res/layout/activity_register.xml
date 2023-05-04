@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dog">
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="287dp"
+        android:layout_height="61dp"
+        android:hint="Name"
+        android:textColor="#FEFEFE"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <EditText
+        android:id="@+id/textView3"
+        android:layout_width="280dp"
+        android:layout_height="49dp"
+        android:hint="Type"
+        android:textColor="#FEFEFE"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <EditText
+        android:id="@+id/textView4"
+        android:layout_width="282dp"
+        android:layout_height="56dp"
+
+        android:hint="Age"
+        android:textColor="#FEFEFE"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="284dp" />
+
+    <EditText
+        android:id="@+id/textView5"
+        android:layout_width="284dp"
+        android:layout_height="57dp"
+
+        android:hint="Address"
+        android:textColor="#FEFEFE"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="126dp"
+        android:layout_height="60dp"
+        android:text="New Post"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="536dp" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="290dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:textColor="#FEFEFE"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        android:inputType="phone"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="471dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
