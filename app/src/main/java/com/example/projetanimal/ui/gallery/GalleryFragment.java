@@ -1,5 +1,6 @@
 package com.example.projetanimal.ui.gallery;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projetanimal.Adapteritem;
+import com.example.projetanimal.Post;
 import com.example.projetanimal.R;
 import com.example.projetanimal.User;
 import com.example.projetanimal.databinding.FragmentGalleryBinding;
@@ -33,6 +35,7 @@ public class GalleryFragment extends Fragment {
     private Adapteritem adapteritem;
     private RecyclerView recyclerView;
     DatabaseReference database;
+
 
 
 

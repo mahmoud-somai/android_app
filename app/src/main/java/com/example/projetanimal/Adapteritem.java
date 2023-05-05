@@ -18,6 +18,8 @@ public class Adapteritem extends RecyclerView.Adapter<Adapteritem.ItemViewHolder
     Context context ;
     ArrayList<User> arr;
 
+
+
     public Adapteritem(Context context, ArrayList<User> arr) {
         this.context = context;
         this.arr = arr;
