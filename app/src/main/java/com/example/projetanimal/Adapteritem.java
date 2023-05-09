@@ -16,11 +16,11 @@ import java.util.ArrayList;
 public class Adapteritem extends RecyclerView.Adapter<Adapteritem.ItemViewHolder>{
 
     Context context ;
-    ArrayList<User> arr;
+    ArrayList<Animal> arr;
 
 
 
-    public Adapteritem(Context context, ArrayList<User> arr) {
+    public Adapteritem(Context context, ArrayList<Animal> arr) {
         this.context = context;
         this.arr = arr;
     }
@@ -36,10 +36,12 @@ public class Adapteritem extends RecyclerView.Adapter<Adapteritem.ItemViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
-        User user=arr.get(position);
-        holder.firstname.setText(user.getFirstname());
-        holder.lastname.setText(user.getLastname());
-        holder.age.setText(user.getAge());
+        Animal animal=arr.get(position);
+        holder.name.setText(animal.getName());
+        holder.type.setText(animal.getType());
+        holder.age.setText(animal.getAge());
+        holder.address.setText(animal.getAddress());
+        holder.phone.setText(Integer.toString(animal.getPhone()));
 
     }
 
@@ -49,13 +51,15 @@ public class Adapteritem extends RecyclerView.Adapter<Adapteritem.ItemViewHolder
     }
 
     class  ItemViewHolder extends RecyclerView.ViewHolder{
-        TextView firstname,lastname,age;
+        TextView name,type,age,address,phone;
 
         public  ItemViewHolder(@NonNull View itemView) {
             super(itemView);
-            firstname=itemView.findViewById(R.id.tvfirstname);
-            lastname=itemView.findViewById(R.id.tvlastname);
+            name=itemView.findViewById(R.id.tvname);
+            type=itemView.findViewById(R.id.tvtype);
             age=itemView.findViewById(R.id.tvage);
+            address=itemView.findViewById(R.id.tvaddress);
+            phone=itemView.findViewById(R.id.tvphone);
         }
     }
 }

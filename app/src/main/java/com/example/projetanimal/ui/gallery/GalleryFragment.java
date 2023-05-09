@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projetanimal.Adapteritem;
+import com.example.projetanimal.Animal;
 import com.example.projetanimal.Post;
 import com.example.projetanimal.R;
 import com.example.projetanimal.User;
@@ -31,7 +32,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class GalleryFragment extends Fragment {
-    private ArrayList<User> arr;
+    private ArrayList<Animal> arr;
     private Adapteritem adapteritem;
     private RecyclerView recyclerView;
     DatabaseReference database;
@@ -49,7 +50,7 @@ public class GalleryFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_gallery,container,false);
 
         recyclerView=view.findViewById(R.id.recyclerview);
-        database = FirebaseDatabase.getInstance().getReference("Users");
+        database = FirebaseDatabase.getInstance().getReference("Animals");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -62,8 +63,8 @@ public class GalleryFragment extends Fragment {
             @Override
              public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot:snapshot.getChildren()){
-                    User user=dataSnapshot.getValue(User.class);
-                    arr.add(user);
+                    Animal animal=dataSnapshot.getValue(Animal.class);
+                    arr.add(animal);
                 }
                 adapteritem.notifyDataSetChanged();
             }

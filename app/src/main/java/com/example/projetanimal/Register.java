@@ -1,5 +1,6 @@
 package com.example.projetanimal;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,31 +14,35 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity {
-    private EditText name;
-    private EditText type;
-    private EditText address;
+    private EditText firstname;
+    private EditText lastname;
     private EditText phone;
-    private EditText age;
+    private EditText email;
+    private EditText password;
     private Button postbtn;
 
     DatabaseReference AnimalDbRef;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        name=findViewById(R.id.name);
-        type=findViewById(R.id.type);
-        age=findViewById(R.id.age);
-        phone=findViewById(R.id.phone);
-        address=findViewById(R.id.address);
+        firstname=findViewById(R.id.userfirstname);
+        lastname=findViewById(R.id.userlastname);
+        email=findViewById(R.id.useremail);
+        phone=findViewById(R.id.userphone);
+        password=findViewById(R.id.userpassword);
         postbtn=findViewById(R.id.postbtn);
 
-        AnimalDbRef = FirebaseDatabase.getInstance().getReference().child("Animals");
+        AnimalDbRef = FirebaseDatabase.getInstance().getReference().child("Users");
         postbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent intent = new Intent(Register.this, login.class);
+                startActivity(intent);
                 insertAnimalData();
             }
         });
@@ -46,17 +51,17 @@ public class Register extends AppCompatActivity {
 
     }
     private void insertAnimalData(){
-        String rname=name.getText().toString();
-        String rtype=type.getText().toString();
-        String rage=age.getText().toString();
+        String regfirstname=firstname.getText().toString();
+        String reglastname=lastname.getText().toString();
+        String regemail=email.getText().toString();
 
-        String raddress=address.getText().toString();
-        String rphoneString = phone.getText().toString();
-        int rphone = Integer.parseInt(rphoneString);
+        String regpassword=password.getText().toString();
+        String regphoneString = phone.getText().toString();
+        int regphone = Integer.parseInt(regphoneString);
 
 
-        Animal animals=new Animal(rname,rtype,rage,raddress,rphone);
-        AnimalDbRef.push().setValue(animals);
+        User users= new User(regfirstname,reglastname,regemail,regpassword,regphone);
+        AnimalDbRef.push().setValue(users);
         Toast.makeText(Register.this,"Data Inserted",Toast.LENGTH_SHORT).show();
 
 

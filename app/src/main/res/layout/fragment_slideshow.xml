@@ -8,7 +8,7 @@
     tools:context=".ui.slideshow.SlideshowFragment">
 
     <EditText
-        android:id="@+id/textView6"
+        android:id="@+id/firstnameuser"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="55dp"
@@ -19,13 +19,13 @@
         android:textColor="#FEFEFE"
         android:textColorHint="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintBottom_toTopOf="@+id/lastnameuser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textView7"
+        android:id="@+id/lastnameuser"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="51dp"
@@ -35,13 +35,13 @@
         android:textColor="#FEFEFE"
         android:textColorHint="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPhone3"
+        app:layout_constraintBottom_toTopOf="@+id/phoneuser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/firstnameuser" />
 
     <EditText
-        android:id="@+id/editTextPhone3"
+        android:id="@+id/phoneuser"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="55dp"
@@ -53,13 +53,13 @@
         android:textColor="#FEFEFE"
         android:textColorHint="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress3"
+        app:layout_constraintBottom_toTopOf="@+id/emailuser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/lastnameuser" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress3"
+        android:id="@+id/emailuser"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="26dp"
@@ -69,13 +69,13 @@
         android:textColor="#FEFEFE"
         android:textColorHint="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword3"
-        app:layout_constraintEnd_toEndOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone3" />
+        app:layout_constraintBottom_toTopOf="@+id/passworduser"
+        app:layout_constraintEnd_toEndOf="@+id/firstnameuser"
+        app:layout_constraintStart_toStartOf="@+id/passworduser"
+        app:layout_constraintTop_toBottomOf="@+id/phoneuser" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/passworduser"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="67dp"
@@ -87,13 +87,13 @@
         android:textColor="#FEFEFE"
         android:textColorHint="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/btnreg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3" />
+        app:layout_constraintTop_toBottomOf="@+id/emailuser" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnreg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="171dp"
@@ -104,5 +104,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+        app:layout_constraintTop_toBottomOf="@+id/passworduser" />
 </androidx.constraintlayout.widget.ConstraintLayout>

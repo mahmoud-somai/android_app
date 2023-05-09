@@ -7,99 +7,94 @@
     android:background="@drawable/dog"
     tools:context=".Register">
 
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="62dp"
-        android:layout_marginBottom="44dp"
-        android:hint="Name"
-        android:textColor="#FEFEFE"
-        android:textColorHint="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/type"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/type"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="55dp"
-        android:hint="Type"
-        android:textColor="#FEFEFE"
-        android:textColorHint="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/age"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
-
-    <EditText
-        android:id="@+id/age"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:layout_marginStart="2dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="47dp"
-        android:hint="Age"
-        android:textColor="#FEFEFE"
-        android:textColorHint="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/address"
-        app:layout_constraintEnd_toEndOf="@+id/type"
-        app:layout_constraintStart_toStartOf="@+id/address"
-        app:layout_constraintTop_toBottomOf="@+id/type" />
-
-    <EditText
-        android:id="@+id/address"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:layout_marginStart="59dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginBottom="27dp"
-        android:hint="Address"
-        android:textColor="#FEFEFE"
-        android:textColorHint="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age" />
-
     <Button
         android:id="@+id/postbtn"
-        android:layout_width="126dp"
+        android:layout_width="141dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="135dp"
+        android:layout_marginBottom="133dp"
         android:text="New Post"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
+        app:layout_constraintTop_toBottomOf="@+id/userpassword"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/phone"
+        android:id="@+id/userfirstname"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="19dp"
-        android:ems="10"
-        android:hint="Phone Number"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="23dp"
+        android:text="TextView"
+        android:textColor="#00EAFF"
+        app:layout_constraintBottom_toTopOf="@+id/userlastname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userphone"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/userlastname"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="46dp"
+        android:text="TextView"
+        android:textColor="#00EAFF"
+        app:layout_constraintBottom_toTopOf="@+id/useremail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userfirstname"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/userphone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="43dp"
+        android:text="TextView"
         android:inputType="phone"
-        android:textColor="#FEFEFE"
-        android:textColorHint="@color/white"
-        android:textStyle="bold"
+        android:textColor="#00EAFF"
+        app:layout_constraintBottom_toTopOf="@+id/userfirstname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/useremail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="#00EAFF"
+        app:layout_constraintBottom_toTopOf="@+id/userpassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userlastname"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/userpassword"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="140dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="#00EAFF"
         app:layout_constraintBottom_toTopOf="@+id/postbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address" />
+        app:layout_constraintTop_toBottomOf="@+id/useremail"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

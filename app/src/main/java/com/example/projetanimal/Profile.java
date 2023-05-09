@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.projetanimal.ui.gallery.GalleryFragment;
+
 public class Profile extends AppCompatActivity {
     private ImageView profileImage;
     private TextView profileName;
@@ -27,6 +29,20 @@ public class Profile extends AppCompatActivity {
         SeeNewPost=findViewById(R.id.seeNewPost);
         logout=findViewById(R.id.logout);
 
+        AddNewPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Profile.this,Posts.class);
+                startActivity(intent);
+            }
+        });
+        SeeNewPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Profile.this, GalleryFragment.class);
+                startActivity(intent);
+            }
+        });
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

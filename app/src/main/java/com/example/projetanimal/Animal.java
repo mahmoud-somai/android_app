@@ -7,12 +7,7 @@ public class Animal {
     String address;
     int phone;
 
-    public Animal(String name, String type, String age, String address, int phone) {
-        this.name = name;
-        this.type = type;
-        this.age = age;
-        this.address = address;
-        this.phone = phone;
+    public Animal() {
     }
 
     public String getName() {
